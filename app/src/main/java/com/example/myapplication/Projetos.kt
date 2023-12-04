@@ -1,5 +1,9 @@
+import android.content.Context
+import android.content.Intent
+import android.net.Uri
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -24,6 +28,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.colorspace.ColorSpaces
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.input.TextFieldValue
 import androidx.compose.ui.unit.dp
@@ -91,12 +96,20 @@ fun ProjectCard() {
             .fillMaxWidth()
             .padding(16.dp)
     ) {
+        val context = LocalContext.current
+
         Image(
             modifier = Modifier
                 .height(150.dp)
                 .fillMaxWidth()
-                .clip(MaterialTheme.shapes.medium),
-            painter = painterResource(id = R.drawable.imagem_portfolio), contentDescription = ""
+                .clip(MaterialTheme.shapes.medium)
+                .clickable {
+                    openUrl(
+                        context,
+                        "https://projeto-n0udml7jh-rayssadavvila.vercel.app/?classId=a278db46-860a-4427-8c15-29cf8cd93ad7&assignmentId=59327425-16e3-4b48-abde-b19dec5ea5b4&submissionId=b798d36e-efb6-9be0-5108-d56e2014dbe1"
+                    )
+                },
+            painter = painterResource(id = R.drawable.img_mty), contentDescription = ""
         )
         Spacer(modifier = Modifier.height(16.dp))
 
@@ -127,12 +140,19 @@ fun ProjectCard2() {
             .fillMaxWidth()
             .padding(16.dp)
     ) {
+        val context = LocalContext.current
         Image(
             modifier = Modifier
                 .height(150.dp)
                 .fillMaxWidth()
-                .clip(MaterialTheme.shapes.medium),
-            painter = painterResource(id = R.drawable.imagem_portfolio), contentDescription = ""
+                .clip(MaterialTheme.shapes.medium)
+                .clickable {
+                    openUrl(
+                       context,
+                        "https://portfolio-3dbkpmcbz-rayssadavvila.vercel.app/boredAPI.html"
+                    )
+                },
+            painter = painterResource(id = R.drawable.img_are_you_bored_api), contentDescription = ""
         )
         Spacer(modifier = Modifier.height(16.dp))
 
@@ -153,4 +173,9 @@ fun ProjectCard2() {
                 .padding(4.dp)
         )
     }
+}
+
+fun openUrl(context: Context, url: String) {
+    val intent = Intent(Intent.ACTION_VIEW, Uri.parse(url))
+    context.startActivity(intent)
 }
