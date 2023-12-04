@@ -1,5 +1,6 @@
 package com.example.myapplication
 
+import ProjetosScreen
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
@@ -32,6 +33,7 @@ fun NavigationView() {
             ProjetosScreen (
                 onSkills = {navController.navigate("skills") },
                 onHome = {navController.popBackStack("home", false) })
+
         }
     }
 }
