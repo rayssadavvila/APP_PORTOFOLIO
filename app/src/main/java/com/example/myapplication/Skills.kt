@@ -23,7 +23,7 @@ import androidx.compose.ui.unit.sp
 import androidx.navigation.NavHostController
 
 @Composable
-fun SkillsScreen(onHome: () -> Unit, onProjects: () -> Unit) {
+fun SkillsScreen(onProjects: () -> Unit, onHome: () -> Unit) {
     Column(
         Modifier.fillMaxSize(),
         horizontalAlignment = Alignment.CenterHorizontally,

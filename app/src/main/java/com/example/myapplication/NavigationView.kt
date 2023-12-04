@@ -26,14 +26,15 @@ fun NavigationView() {
         }
         composable("skills") {
             SkillsScreen(
-                onHome = { navController.popBackStack() },
+                onHome = { navController.popBackStack("home", false) },
+                //onHome = {navController.navigate(("onHome"))},
                 onProjects = { navController.navigate("projetos") })
         }
         composable("projetos") {
             ProjetosScreen (
                 onSkills = {navController.navigate("skills") },
                 onHome = {navController.popBackStack("home", false) })
-
+                //onHome = {navController.navigate(("onHome") })
         }
     }
 }

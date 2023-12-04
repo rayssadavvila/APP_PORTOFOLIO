@@ -56,9 +56,9 @@ import androidx.navigation.NavHostController
             )
             Text(
 
-                text = "Oi! me chamo Rayssa, e sou estudante do quinto período do curso de Ciência da Computação.",
+                text = "Oi! me chamo Rayssa, e sou estudante do quinto período do curso de Ciência da Computação. Minhas áreas de interesse são em \n desenvolvimento, tanto front-end \n quanto back-end. \n Sobre esse portfólio, dividi ele em 3 partes\n sendo elas: Home, Skills e Projetos",
                 modifier = Modifier
-                    .offset(y=40.dp)
+                    .offset(y=30.dp)
                     .offset(x=20.dp)
             )
             Button(
