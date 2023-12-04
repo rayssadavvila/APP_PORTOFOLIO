@@ -11,6 +11,8 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.colorspace.ColorSpaces
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavHostController
@@ -23,10 +25,11 @@ fun ProjetosScreen(onSkills: () -> Unit, onHome: () -> Unit) {
         //verticalArrangement = Arrangement.Center
     ) {
         Text(
-                modifier = Modifier
-                    .offset(y=30.dp),
-                fontSize = 40.sp,
-            text = "Projetos")
+            modifier = Modifier
+                .offset(y=30.dp)
+                .offset(x=10.dp),
+            fontSize = 40.sp,
+            text = "Projetos", color = Color.hsv(hue = 300f, saturation= 1f, value = 0.4f, alpha = 1f, colorSpace = ColorSpaces.Srgb))
 
         Button(
             modifier = Modifier

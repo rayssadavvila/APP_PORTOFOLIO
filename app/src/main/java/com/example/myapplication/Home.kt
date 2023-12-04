@@ -15,6 +15,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.colorspace.ColorSpaces
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
@@ -29,14 +30,23 @@ import androidx.navigation.NavHostController
             //horizontalAlignment = Alignment.CenterHorizontally,
             //verticalArrangement = Arrangement.Center
         ) {
-            Text(
-                modifier = Modifier
-                    .offset(y=30.dp),
-                fontSize = 40.sp, 
-                text = "Portfólio" )
+            //@Composable
+            //fun purpleText(){
+                Text(
+                    modifier = Modifier
+                        .offset(y=30.dp)
+                        .offset(x=10.dp),
+                    fontSize = 40.sp,
+                    text = "Portfólio", color = Color.hsv(hue = 300f, saturation= 1f, value = 0.4f, alpha = 1f, colorSpace = ColorSpaces.Srgb))
+            //}
+
+            /*@Composable
+            fun BlueText() {
+                Text("Hello World", color = Color.Blue)
+            }*/
             
             Image(
-                painter = painterResource(id = R.drawable.img_app_pwm), contentDescription = "",
+                painter = painterResource(id = R.drawable.imagem_portfolio), contentDescription = "",
                 contentScale = ContentScale.Crop,
                 modifier = Modifier
                     .size(200.dp)
