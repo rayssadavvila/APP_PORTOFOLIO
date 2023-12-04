@@ -109,7 +109,7 @@ fun ProjectCard() {
                 .padding(4.dp)
         )
         Text(
-            text = "Projeto de um site de recomendação de músicas através da escolha de um gênero musical",
+            text = "Projeto de um site de recomendação de músicas através da escolha de um gênero musical (clique na imagem para ver) ",
             fontSize = 16.sp,
             color = Color.Gray,
             modifier = Modifier
@@ -152,7 +152,7 @@ fun ProjectCard2() {
                 .padding(4.dp)
         )
         Text(
-            text = "Projeto de um site de recomendações randômicas de atividades, para caso você esteja entediado. ",
+            text = "Projeto de um site de recomendações randômicas de atividades, para caso você esteja entediado. (clique na imagem para ver) ",
             fontSize = 16.sp,
             color = Color.Gray,
             modifier = Modifier
