@@ -27,24 +27,14 @@ import androidx.navigation.NavHostController
     fun Home(onSkills: () -> Unit, onProjects: () -> Unit) {
         Column(
             Modifier.fillMaxSize(),
-            //horizontalAlignment = Alignment.CenterHorizontally,
-            //verticalArrangement = Arrangement.Center
         ) {
-            //@Composable
-            //fun purpleText(){
                 Text(
                     modifier = Modifier
                         .offset(y=30.dp)
                         .offset(x=10.dp),
                     fontSize = 40.sp,
                     text = "Portfólio", color = Color.hsv(hue = 300f, saturation= 1f, value = 0.4f, alpha = 1f, colorSpace = ColorSpaces.Srgb))
-            //}
 
-            /*@Composable
-            fun BlueText() {
-                Text("Hello World", color = Color.Blue)
-            }*/
-            
             Image(
                 painter = painterResource(id = R.drawable.imagem_portfolio), contentDescription = "",
                 contentScale = ContentScale.Crop,
@@ -65,26 +55,15 @@ import androidx.navigation.NavHostController
                 modifier = Modifier
                     .offset(y = 50.dp)
                     .offset(x = 10.dp),
-                    //.background(Color.Black),
                 onClick = onSkills) {
                     Text("Ir para tela de Skills")
                 }
-           // )
+
             Button(
                 modifier = Modifier
                     .offset(y = 50.dp)
                     .offset(x = 10.dp),
                 onClick = onProjects) { Text("Ir para a tela de projetos")
             }
-            /*{
-                Text("Ir para tela de Skills")
-
-                Button(
-                    modifier = Modifier
-                        .offset(y = 50.dp)
-                        .offset(x = 10.dp),
-                    onClick = onProfile) { Text("Ir para a tela de projetos")
-                }
-            }*/
         }
     }

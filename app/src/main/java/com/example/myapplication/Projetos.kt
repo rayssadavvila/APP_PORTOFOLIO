@@ -52,24 +52,11 @@ fun ProjetosScreen(onSkills: () -> Unit, onHome: () -> Unit) {
 
         Spacer(modifier = Modifier.height(16.dp))
 
-        // Exemplo de três cards
         repeat(1) {
             ProjectCard()
             ProjectCard2()
             Spacer(modifier = Modifier.height(16.dp))
         }
-
-       /* val projects = listOf(
-            ProjectCard("MTY - Music To You", "Projeto de um site de recomendação de músicas através da escolha de um gênero musical"),
-            ProjectCard("Nome do Projeto 2", "Descrição do Projeto 2"),
-            //ProjectCard("Nome do Projeto 3", "Descrição do Projeto 3")
-        )
-
-        projects.forEach {
-            //ProjectCard(title = "MTY - Music To You", description = "projeto")
-
-            Spacer(modifier = Modifier.height(16.dp))
-        }*/
 
         Spacer(modifier = Modifier.weight(1f))
 

@@ -27,24 +27,19 @@ fun SkillsScreen(onProjects: () -> Unit, onHome: () -> Unit) {
     Column(
         Modifier.fillMaxSize(),
         horizontalAlignment = Alignment.CenterHorizontally,
-        //verticalArrangement = Arrangement.Center
     ) {
         Text(
             modifier = Modifier
                 .offset(y=30.dp),
-                //.offset(x=10.dp),
             fontSize = 40.sp,
             text = "Skills", color = Color.hsv(hue = 300f, saturation= 1f, value = 0.4f, alpha = 1f, colorSpace = ColorSpaces.Srgb))
 
 
         Image(
             painter = painterResource(id = R.drawable.html_logo), contentDescription = "",
-            //contentScale = ContentScale.Crop,
             modifier = Modifier
                 .size(50.dp)
-                //.clip(RoundedCornerShape(16.dp))
                 .offset(y = 40.dp)
-                //.offset(x=20.dp) ,
         )
 
         Text(
@@ -55,12 +50,9 @@ fun SkillsScreen(onProjects: () -> Unit, onHome: () -> Unit) {
 
         Image(
             painter = painterResource(id = R.drawable.css_logo), contentDescription = "",
-            //contentScale = ContentScale.Crop,
             modifier = Modifier
                 .size(50.dp)
-                //.clip(RoundedCornerShape(16.dp))
                 .offset(y = 70.dp)
-            //.offset(x=20.dp) ,
         )
 
         Text(
@@ -109,14 +101,12 @@ fun SkillsScreen(onProjects: () -> Unit, onHome: () -> Unit) {
         Button(
             modifier = Modifier
                 .offset(y = 200.dp),
-                //.offset(x = 10.dp),
             onClick = onHome) {
             Text("Ir para a tela Home") }
 
         Button(
             modifier = Modifier
                 .offset(y = 200.dp),
-                //.offset(x = 10.dp),
             onClick = onProjects) { Text("Ir para a tela de projetos") }
     }
 }
